@@ -7,7 +7,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "kz.tredo.storage_android"
+        applicationId "kz.tredo.sample"
         minSdk 21
         targetSdk 32
         versionCode 1
@@ -47,5 +47,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     implementation "androidx.datastore:datastore-preferences:1.0.0"
-    implementation project(":storage")
+    implementation 'com.github.TredoCompany:storage:1.0.0'
 }

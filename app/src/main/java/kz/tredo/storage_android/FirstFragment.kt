@@ -11,8 +11,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import kz.tredo.sample.R
+import kz.tredo.sample.databinding.FragmentFirstBinding
 import kz.tredo.storage.datastore.DataStoreManager
-import kz.tredo.storage_android.databinding.FragmentFirstBinding
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.

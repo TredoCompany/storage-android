@@ -9,7 +9,8 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
-import kz.tredo.storage_android.databinding.ActivityMainBinding
+import kz.tredo.sample.R
+import kz.tredo.sample.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
