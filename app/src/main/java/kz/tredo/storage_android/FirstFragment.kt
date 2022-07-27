@@ -1,11 +1,17 @@
 package kz.tredo.storage_android
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.datastore.preferences.core.stringPreferencesKey
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
+import kz.tredo.storage.datastore.DataStoreManager
 import kz.tredo.storage_android.databinding.FragmentFirstBinding
 
 /**
@@ -34,6 +40,14 @@ class FirstFragment : Fragment() {
 
         binding.buttonFirst.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        }
+
+        val dataStoreManager = DataStoreManager(context = requireContext())
+        viewLifecycleOwner.lifecycleScope.launch {
+            dataStoreManager.write("data", stringPreferencesKey("NAME"))
+            dataStoreManager.read(stringPreferencesKey("NAME")).collectLatest {
+                Log.e("DATA STORE", it.orEmpty())
+            }
         }
     }
 

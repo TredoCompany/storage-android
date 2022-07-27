@@ -23,7 +23,7 @@ const val BACKUP_SHARED_PREF = "BACKUP_SHARED_PREF"
  * Добавить в манифест
  *      android:fullBackupContent="@xml/backup_scheme"
  * */
-class SharedPreference(private val context: Context) {
+class SharedPreferenceManager(private val context: Context) {
 
     private val sharedPreferencesEditorMap =
         mutableMapOf<SharedPreferences, SharedPreferences.Editor>()
