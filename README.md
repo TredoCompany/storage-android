@@ -15,6 +15,6 @@ allprojects {
 build.gradle(app)
 ```groovy
 dependencies {
-    implementation 'com.github.TredoCompany:storage-android:1.0.0'
+    implementation 'com.github.TredoCompany:storage:1.0.0'
 }
 ```
